@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH -o my.%j.out          # 脚本执行的输出将被保存在my.%j.out文件下，%j表示作业号;
+#SBATCH --partition=fvl       # 作业提交的指定分区;
+#SBATCH --qos=high            # 指定作业的QOS;
+#SBATCH -J split               # 作业在调度系统中的作业名;
+#SBATCH --nodes=1             # 申请节点数为1;
+#SBATCH --gres=gpu:1          # 申请GPU数量为1;
+#SBATCH --mem=48G             # 申请内存为24G;
+#SBATCH --time=48:00:00       # 作业运行的最长时间为2天
+#SBATCH -w fvl03
+source activate sam1          # 激活的conda环境为cola;
+#python -u tracking_demo_ava.py > tracking_demo_ava_rectify.out
+#python shot_cnt_new.py
+#python -u z_split.py > z_split7.out
+python -u shot_split.py > shot_split.out

@@ -1,0 +1,75 @@
+from _typeshed import ConvertibleToFloat, ConvertibleToInt, Incomplete
+from typing import ClassVar, Literal
+from typing_extensions import TypeAlias
+
+from openpyxl.descriptors.base import Alias, Bool, Integer, MinMax, NoneSet, Set, Typed, _ConvertibleToBool
+from openpyxl.descriptors.excel import ExtensionList
+from openpyxl.descriptors.nested import NestedNoneSet, NestedValue, _NestedNoneSetParam
+from openpyxl.descriptors.serialisable import Serialisable
+from openpyxl.drawing.colors import ColorChoice, HSLColor, RGBPercent as _RGBPercent, SchemeColor, SystemColor, _PresetColors
+from openpyxl.drawing.effect import (
+    AlphaBiLevelEffect,
+    AlphaCeilingEffect,
+    AlphaFloorEffect,
+    AlphaInverseEffect,
+    AlphaModulateEffect,
+    AlphaModulateFixedEffect,
+    AlphaReplaceEffect,
+    BiLevelEffect,
+    BlurEffect,
+    ColorChangeEffect,
+    ColorReplaceEffect,
+    DuotoneEffect,
+    FillOverlayEffect,
+    GrayscaleEffect,
+    HSLEffect,
+    LuminanceEffect,
+    TintEffect,
+)
+
+from ..xml._functions_overloads import _HasTagAndGet
+
+_PatternFillPropertiesPrst: TypeAlias = Literal[
+    "pct5",
+    "pct10",
+    "pct20",
+    "pct25",
+    "pct30",
+    "pct40",
+    "pct50",
+    "pct60",
+    "pct70",
+    "pct75",
+    "pct80",
+    "pct90",
+    "horz",
+    "vert",
+    "ltHorz",
+    "ltVert",
+    "dkHorz",
+    "dkVert",
+    "narHorz",
+    "narVert",
+    "dashHorz",
+    "dashVert",
+    "cross",
+    "dnDiag",
+    "upDiag",
+    "ltDnDiag",
+    "ltUpDiag",
+    "dkDnDiag",
+    "dkUpDiag",
+    "wdDnDiag",
+    "wdUpDiag",
+    "dashDnDiag",
+    "dashUpDiag",
+    "diagCross",
+    "smCheck",
+    "lgCheck",
+    "smGrid",
+    "lgGrid",
+    "dotGrid",
+    "smConfetti",
+    "lgConfetti",
+    "horzBrick",
+    "diagBrick",
